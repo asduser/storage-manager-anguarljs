@@ -46,6 +46,6 @@ _sm.set("color", "red");
 _sm.toggle();
 
 // Get all values. Will be displayed: ["message=Hello, world!", "Name=Bob"];
-_sm.use().getAll();
+console.log( _sm.use().getAll() );
 
 ``` 

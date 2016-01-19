@@ -33,14 +33,14 @@ At the moment, both storage types have a CRUD-funcionality. So, you may use sett
 ```javascript
 
 // Set a new values.
-_sm.set("message", "Hello, world!");
-_sm.set("Name", "Bob");
+_sm.use().set("message", "Hello, world!");
+_sm.use().set("Name", "Bob");
 
 // Switch to another storage.
 _sm.toggle();
 
 // Set a new values into it.
-_sm.set("color", "red");
+_sm.use().set("color", "red");
 
 // Return to the initial storage (cookie type).
 _sm.toggle();

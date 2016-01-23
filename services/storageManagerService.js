@@ -13,7 +13,7 @@
      */
     function storageManager(cookieService, localDBService){
 
-        var storage,
+        var _sm = this,
             TYPE = {
                 "cookie": cookieService,
                 "localDB": localDBService
@@ -21,17 +21,12 @@
 
         // Forcibly assign a new storage type.
         this.specify = function(newType){
-            storage = TYPE[newType];
-        };
-
-        // Toggle an existing storage type to another.
-        this.toggle = function(){
-            storage = storage === cookieService ? localDBService : cookieService ;
-        };
-
-        // Allow user to use an appropriate storage methods.
-        this.use = function(){
-            return storage;
+            for (var prop in TYPE[newType]) {
+                if (TYPE[newType].hasOwnProperty(prop)) {
+                    _sm[prop] = TYPE[newType][prop];
+                }
+            }
+            return _sm;
         };
 
     }

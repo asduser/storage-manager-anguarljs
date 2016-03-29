@@ -3,7 +3,7 @@
     "use strict";
 
     angular
-        .module("myApp", ["utils"])
+        .module("myApp", ["FE.utils"])
         .controller("mainController", mainController);
 
     /**

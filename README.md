@@ -3,38 +3,36 @@ Tool which definitely simplifies the work with saving\editing data inside Angula
 
 ## How to use
 
-First of all, inject utils module into your application. Thereafter you may use full-version or single manager: cookieService and localDBService. 
+First of all, you have to specify a type of storage. Actually, there are two types: 'cookie' and 'localDB'.
+Then use CRUD methods to manage the data inside your application.
 
-To get more powerful effect use combined storage managing service ("<b>utils.storageService</b>").
-
-### Methods and actions
+## Methods and actions
     
 ```javascript
 
 // Set value.
-serviceManager.set('message', 'hi');
+storageManager.set('message', 'hi');
 
 // Get value.
-serviceManager.get('message');
-serviceManager.getAll();
+storageManager.get('message');
+storageManager.getAll();
 
 // Delete value.
-serviceManager.delete('message');
-serviceManager.deleteAll();
-
+storageManager.delete('message');
+storageManager.deleteAll();
 
 ```
 
-### Example of usage
+## Examples
 
 ```javascript
 
 // ...
 
-function myController(serviceManager) {
+function myController(storageManager) {
 
 // Declare service manager.
-var _sm = serviceManager;
+var _sm = storageManager;
 
 // ...
 

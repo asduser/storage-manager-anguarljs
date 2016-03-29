@@ -3,7 +3,7 @@
     "use strict";
 
     angular
-        .module("utils")
+        .module("FE.utils")
         .service("utils.cookieService", cookieService);
 
     /**

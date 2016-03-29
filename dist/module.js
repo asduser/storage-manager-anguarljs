@@ -3,6 +3,6 @@
     "use strict";
 
     angular
-        .module("utils", []);
+        .module("FE.utils", []);
 
 })();

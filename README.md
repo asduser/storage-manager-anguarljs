@@ -1,5 +1,5 @@
 # storage-manager-anguarljs
-Tool which definitely simplifies the work with saving\editing data inside Angular.js applications.
+Tool which definitely simplifies the work with saving\editing data inside Angular.js application.
 
 ## How to use
 

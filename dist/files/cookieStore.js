@@ -8,8 +8,9 @@
 
     /**
      * Declare cookie service to work with cookies with CRUD functionality.
+     * @param {Object} SMHelper
      */
-    function cookieService(){
+    function cookieService(SMHelper){
 
         this.delete = deleteCookie;
         this.deleteAll = deleteAll;
@@ -40,13 +41,29 @@
         /**
          ** Get cookie from storage.
          * @param {String} name - cookie's name
-         * @returns {String | Undefined}
+         * @returns {String | Boolean}
          */
         function getCookie(name) {
             var matches = document.cookie.match(new RegExp(
                 "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
             ));
-            return matches ? decodeURIComponent(matches[1]) : undefined;
+
+            /*var result, val = matches ? decodeURIComponent(matches[1]) : null;
+            if (val) {
+                if (typeof val == "string") {
+                    try {
+                        result = JSON.parse(val);
+                    } catch (e) {
+                        result = val;
+                    }
+                } else {
+                    result = val;
+                }
+                return result;
+            }
+            return false;*/
+
+            return SMHelper.getValueOrNull( matches ? decodeURIComponent(matches[1]) : null );
         }
 
         /**
@@ -66,11 +83,21 @@
          ** Specifies a new cookie into storage.
          * @param {String} cname - cookie's name
          * @param {String} cvalue - cookie's value
+         * @returns {Boolean}
          */
         function setCookie(cname, cvalue) {
-            document.cookie = cname + "=" + cvalue;
+            if (cvalue && cname) {
+                document.cookie = cname + "=" + cvalue;
+                return true;
+            }
+            return false;
         }
 
     }
+
+    // IoC container.
+    cookieService.$inject = [
+        "utils.SMHelper"
+    ];
 
 })();

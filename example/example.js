@@ -9,17 +9,16 @@
     /**
      * Declare storage service to manage localDB & cookies.
      */
-    function mainController($scope, storageManager){
+    function mainController(storageManager){
 
         // Declare storage manager.
         // Now you may use one of the existing methods.
-        $scope._sm = storageManager;
+        window._sm = storageManager;
 
     }
 
     // IoC container.
     mainController.$inject = [
-        "$scope",
         "utils.storageManager"
     ];
 

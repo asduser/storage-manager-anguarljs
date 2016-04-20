@@ -1,0 +1,13 @@
+{
+  "name": "StorageManager",
+  "version": "1.0.0",
+  "description": "A special service to work with client-side storages.",
+  "repository": "",
+  "author": "asduser",
+  "license": "",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*"
+  }
+}

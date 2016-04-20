@@ -3,13 +3,13 @@ Tool which definitely simplifies the work with saving\editing data inside Angula
 
 ## Build, re-build
 
-Double-click on **build.bat**. 
-A new version will be located at *"build/"* directory.
-To see the demo open *index.html* from *"example/"* folder.
+Double-click on **build.bat**.<br/> 
+A new version will be located at *"build/"* directory.<br/>
+To see the demo open *index.html* from *"example/"* folder.<br/>
 
 ## How to use
 
-First of all, you have to specify a type of storage. Actually, there are two types: 'cookie' and 'localDB'.
+First of all, you have to specify a type of storage. Actually, there are two types: 'cookie' and 'localDB'.<br/>
 Then use CRUD methods to manage the data inside your application.
 
 ## Methods and actions

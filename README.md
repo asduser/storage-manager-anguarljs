@@ -73,7 +73,7 @@ console.log( _sm.getAll() );
 
 To include a new storage into module:
 
-1. Add it into suitable *.js file inside *dist/files/* directory (ex. "myStore.js").
+1. Add it into suitable .js file inside *dist/files/* directory (ex. "myStore.js").
 2. Implement CRUD interface there (see similar files 'cookieStore' or 'localDBStore').
 3. Add a special dependency in *dist/files/storageManagerCore.js* like this: "customDB": "myStore".
 4. Press build.bat to rebuild module and update it with a new storage.

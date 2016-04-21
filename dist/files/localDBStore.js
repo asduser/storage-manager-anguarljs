@@ -3,8 +3,8 @@
     "use strict";
 
     angular
-        .module("FE.utils")
-        .service("utils.localDBService", localDBService);
+        .module("ui.storageManager")
+        .service("storageManager.localDBService", localDBService);
 
     /**
      * Declare localDB service to work with cookies with CRUD functionality.
@@ -80,7 +80,7 @@
 
     // IoC container.
     localDBService.$inject = [
-        "utils.SMHelper"
+        "storageManager.SMHelper"
     ];
 
 })();

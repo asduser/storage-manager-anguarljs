@@ -3,8 +3,8 @@
     "use strict";
 
     angular
-        .module("FE.utils")
-        .service("utils.storageManager", storageManager);
+        .module("ui.storageManager")
+        .service("storageManager", storageManager);
 
     /**
      * Declare storage service to manage localDB & cookies.
@@ -19,22 +19,24 @@
                 "localDB": localDBService
             };
 
-        // Forcibly assign a new storage type.
+        // Create a new storage by type.
         this.specify = function(newType){
+            var obj = {};
             for (var prop in TYPE[newType]) {
                 if (TYPE[newType].hasOwnProperty(prop)) {
-                    _sm[prop] = TYPE[newType][prop];
+                    obj[prop] = TYPE[newType][prop];
                 }
             }
-            return _sm;
+            obj.title = newType;
+            return obj;
         };
 
     }
 
     // IoC container.
     storageManager.$inject = [
-        "utils.cookieService",
-        "utils.localDBService"
+        "storageManager.cookieService",
+        "storageManager.localDBService"
     ];
 
 })();

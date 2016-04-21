@@ -3,7 +3,7 @@
     "use strict";
 
     angular
-        .module("myApp", ["FE.utils"])
+        .module("myApp", ["ui.storageManager"])
         .controller("mainController", mainController);
 
     /**
@@ -19,7 +19,7 @@
 
     // IoC container.
     mainController.$inject = [
-        "utils.storageManager"
+        "storageManager"
     ];
 
 })();

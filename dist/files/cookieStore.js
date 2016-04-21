@@ -3,8 +3,8 @@
     "use strict";
 
     angular
-        .module("FE.utils")
-        .service("utils.cookieService", cookieService);
+        .module("ui.storageManager")
+        .service("storageManager.cookieService", cookieService);
 
     /**
      * Declare cookie service to work with cookies with CRUD functionality.
@@ -97,7 +97,7 @@
 
     // IoC container.
     cookieService.$inject = [
-        "utils.SMHelper"
+        "storageManager.SMHelper"
     ];
 
 })();

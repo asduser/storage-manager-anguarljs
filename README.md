@@ -67,6 +67,15 @@ _sm.specify("cookie");
 // Get all values. Will be displayed: ["message=Hello, world!", "Name=Bob"];
 console.log( _sm.getAll() );
 
+```
+
+Or you may set an instance of specific storage to certain variable in $scope, for example:
+
+```javascript
+
+$scope.localStorage = _sm.specify("localDB");
+$scope.cookieStorage = _sm.specify("cookie");
+
 ``` 
 
 ## Another storage

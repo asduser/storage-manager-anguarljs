@@ -3,6 +3,6 @@
     "use strict";
 
     angular
-        .module("FE.utils", []);
+        .module("ui.storageManager", []);
 
 })();

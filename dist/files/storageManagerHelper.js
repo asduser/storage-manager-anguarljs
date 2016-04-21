@@ -3,8 +3,8 @@
     "use strict";
 
     angular
-        .module("FE.utils")
-        .factory("utils.SMHelper", SMHelper);
+        .module("ui.storageManager")
+        .factory("storageManager.SMHelper", SMHelper);
 
     function SMHelper(){
 

@@ -98,3 +98,9 @@ _sm.set("message", "Hello, world!"); // specified a new value.
 _sm.get("message"); // retrieve an existing value by key.
 
 ```
+
+## Licence
+
+MIT License
+
+Copyright (c) 2017 [asduser](https://github.com/asduser)
